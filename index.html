@@ -13,44 +13,52 @@
             font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        /* Арын фонт зураг - Яг Strikingly шиг */
+        /* Арын фонт зураг */
         .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
-                        url('https://stock.adobe.com/search?k=relaxation');
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1516302752625-fbb3c5cef1ef?auto=format&fit=crop&w=1920&q=80');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed; /* Гүйлгэхэд зураг нь хөдлөхгүй */
+            background-attachment: fixed;
             height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
-        /* Дээд талын цэс (Header) */
+        /* Header */
         header {
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px 8%;
-            background: rgba(85, 107, 47, 0.85); /* Strikingly-гийн ногоон өнгө */
+            padding: 15px 8%;
+            background: rgba(85, 107, 47, 0.9);
             position: fixed;
             width: 100%;
             z-index: 1000;
         }
 
+        /* ЛОГОНЫ ХЭСЭГ - ЭНД ӨӨРЧЛӨЛТ ОРСОН */
         .logo {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: bold;
             color: white;
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
+        }
+
+        .logo img {
+            height: 35px; /* Үсгийн хэмжээтэй ойролцоо болгосон */
+            width: auto;
+            vertical-align: middle;
+            filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3)); /* Логог тодруулж өгнө */
         }
 
         nav a {
             color: white;
             text-decoration: none;
             margin-left: 30px;
-            font-size: 15px;
+            font-size: 14px;
             font-weight: 500;
             transition: 0.3s;
         }
@@ -59,7 +67,6 @@
             color: #d4d4d4;
         }
 
-        /* Голын агуулга */
         .main-content {
             flex: 1;
             display: flex;
@@ -72,21 +79,19 @@
         }
 
         .main-content h1 {
-            font-size: 4rem;
+            font-size: 3.5rem;
             color: white;
             margin-bottom: 20px;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
         .main-content p {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             color: white;
             margin-bottom: 40px;
             max-width: 800px;
-            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
         }
 
-        /* Форм (Бүртгэлийн хэсэг) */
         .contact-form {
             display: flex;
             background: rgba(255, 255, 255, 0.15);
@@ -116,17 +121,11 @@
             cursor: pointer;
             font-weight: bold;
             text-transform: uppercase;
-            transition: 0.3s;
         }
 
-        .btn-submit:hover {
-            background-color: #333;
-        }
-
-        /* Гар утсанд зориулсан тохиргоо */
         @media (max-width: 768px) {
-            .main-content h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Гар утсан дээр цэсийг нуух */
+            .main-content h1 { font-size: 2.2rem; }
+            .nav-links { display: none; }
             .contact-form { flex-direction: column; }
         }
     </style>
@@ -136,7 +135,8 @@
     <div class="hero-section">
         <header>
             <div class="logo">
-                <span><img src="https://github.com/kenzozet077-creator/batorgil.github.io/blob/main/0dcdd0ee-e43b-4bfc-a5c4-598c3e71634d_20260107_123208_0000%20(2).png?raw=true"></span> Амуулахуй-Legal Psychology
+                <img src="https://github.com/kenzozet077-creator/batorgil.github.io/blob/main/0dcdd0ee-e43b-4bfc-a5c4-598c3e71634d_20260107_123208_0000%20(2).png?raw=true" alt="Лого">
+                Амуулахуй-Legal Psychology
             </div>
             <nav class="nav-links">
                 <a href="#">Бидний тухай</a>
