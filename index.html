@@ -13,16 +13,9 @@
             font-family: 'Segoe UI', Arial, sans-serif;
         }
 
-        /* Арын фонт зураг */
-        .hero-section {
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('background');
-            background-size: cover;
-            background-position: center;
-            background-attachment: fixed;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
+        /* Гүйлтийг зөөлөн болгох */
+        html {
+            scroll-behavior: smooth;
         }
 
         /* Header */
@@ -31,13 +24,13 @@
             justify-content: space-between;
             align-items: center;
             padding: 15px 8%;
-            background: rgba(85, 107, 47, 0.9);
+            background: rgba(85, 107, 47, 0.95);
             position: fixed;
             width: 100%;
             z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
 
-        /* ЛОГОНЫ ХЭСЭГ - ЭНД ӨӨРЧЛӨЛТ ОРСОН */
         .logo {
             font-size: 20px;
             font-weight: bold;
@@ -48,10 +41,9 @@
         }
 
         .logo img {
-            height: 35px; /* Үсгийн хэмжээтэй ойролцоо болгосон */
+            height: 35px;
             width: auto;
-            vertical-align: middle;
-            filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3)); /* Логог тодруулж өгнө */
+            filter: drop-shadow(0px 0px 2px rgba(0,0,0,0.3));
         }
 
         nav a {
@@ -67,31 +59,36 @@
             color: #d4d4d4;
         }
 
-        .main-content {
-            flex: 1;
+        /* Нүүр хэсэг (Hero) */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                        url('https://images.unsplash.com/photo-1516302752625-fbb3c5cef1ef?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            height: 100vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
+            color: white;
             padding: 0 20px;
-            margin-top: 80px;
         }
 
-        .main-content h1 {
+        .hero-section h1 {
             font-size: 3.5rem;
-            color: white;
             margin-bottom: 20px;
             text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
 
-        .main-content p {
+        .hero-section p {
             font-size: 1.3rem;
-            color: white;
             margin-bottom: 40px;
             max-width: 800px;
         }
 
+        /* Форм */
         .contact-form {
             display: flex;
             background: rgba(255, 255, 255, 0.15);
@@ -123,40 +120,9 @@
             text-transform: uppercase;
         }
 
-        @media (max-width: 768px) {
-            .main-content h1 { font-size: 2.2rem; }
-            .nav-links { display: none; }
-            .contact-form { flex-direction: column; }
-        }
-    </style>
-</head>
-<body>
-
-    <div class="hero-section">
-        <header>
-            <div class="logo">
-                <img src="https://github.com/kenzozet077-creator/batorgil.github.io/blob/main/0dcdd0ee-e43b-4bfc-a5c4-598c3e71634d_20260107_123208_0000%20(2).png?raw=true" alt="Лого">
-                Амуулахуй-Legal Psychology
-            </div>
-            <nav class="nav-links">
-                <a href="#">Бидний тухай</a>
-                <a href="#">Сургалт</a>
-                <a href="#">Онлайн тест бөглөх</a>
-                <a href="#">Комик</a>
-            </nav>
-        </header>
-
-        <main class="main-content">
-            <h1>Сайн байна уу?</h1>
-            <p>Та өөрт тулгамдаж буй асуудлаа бичээрэй. Танд мэргэжлийн туслалцаа үзүүлэх болно.</p>
-            
-            <form class="contact-form">
-                <input type="text" placeholder="Асуудал бичих" required>
-                <input type="email" placeholder="Имэйл хаяг" required>
-                <button type="submit" class="btn-submit">Илгээх</button>
-            </form>
-        </main>
-    </div>
-
-</body>
-</html>
+        /* ШИНЭ ХЭСГҮҮД (Sections) */
+        section {
+            padding: 100px 8%;
+            min-height: 80vh;
+            display: flex;
+            flex-direction: column;
