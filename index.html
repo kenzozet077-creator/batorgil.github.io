@@ -3,62 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Миний Вэбсайт</title>
+    <title>Amuulakhui-Legal Psychology</title>
     <style>
-        body {
-            font-family: 'Inter', sans-serif;
-            background-color: #0f172a; /* Гүн хөх-хар өнгө */
-            color: #f8fafc;
+        /* Ерөнхий тохиргоо */
+        * {
             margin: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        /* Арын фонт зураг - Яг Strikingly шиг */
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), 
+                        url('https://images.unsplash.com/photo-1506466010722-395aa2bef877?auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed; /* Гүйлгэхэд зураг нь хөдлөхгүй */
             height: 100vh;
-            text-align: center;
+            display: flex;
+            flex-direction: column;
         }
-        .card {
-            background: #1e293b;
-            padding: 3rem;
-            border-radius: 20px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid #334155;
-            max-width: 450px;
+
+        /* Дээд талын цэс (Header) */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 8%;
+            background: rgba(85, 107, 47, 0.85); /* Strikingly-гийн ногоон өнгө */
+            position: fixed;
+            width: 100%;
+            z-index: 1000;
         }
-        h1 {
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-            background: linear-gradient(to right, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        p {
-            color: #94a3b8;
-            font-size: 1.1rem;
-            line-height: 1.6;
-        }
-        .btn {
-            display: inline-block;
-            margin-top: 25px;
-            padding: 12px 30px;
-            background: #38bdf8;
-            color: #0f172a;
-            text-decoration: none;
+
+        .logo {
+            font-size: 22px;
             font-weight: bold;
-            border-radius: 10px;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin-left: 30px;
+            font-size: 15px;
+            font-weight: 500;
             transition: 0.3s;
         }
-        .btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+
+        nav a:hover {
+            color: #d4d4d4;
+        }
+
+        /* Голын агуулга */
+        .main-content {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 80px;
+        }
+
+        .main-content h1 {
+            font-size: 4rem;
+            color: white;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .main-content p {
+            font-size: 1.4rem;
+            color: white;
+            margin-bottom: 40px;
+            max-width: 800px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        /* Форм (Бүртгэлийн хэсэг) */
+        .contact-form {
+            display: flex;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 8px;
+            backdrop-filter: blur(5px);
+            gap: 10px;
+            width: 100%;
+            max-width: 700px;
+        }
+
+        .contact-form input {
+            flex: 1;
+            padding: 15px;
+            border: 1px solid rgba(255,255,255,0.3);
+            border-radius: 4px;
+            outline: none;
+            font-size: 16px;
+        }
+
+        .btn-submit {
+            background-color: black;
+            color: white;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background-color: #333;
+        }
+
+        /* Гар утсанд зориулсан тохиргоо */
+        @media (max-width: 768px) {
+            .main-content h1 { font-size: 2.5rem; }
+            .nav-links { display: none; } /* Гар утсан дээр цэсийг нуух */
+            .contact-form { flex-direction: column; }
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <h1>Сайн байна уу?</h1>
-        <p>Намайг <b>[Таны нэр]</b> гэдэг. Би өөрийн анхны вэбсайтыг GitHub Pages ашиглан амжилттай хийлээ!</p>
-        <a href="mailto:tanyaimail@gmail.com" class="btn">Надтай холбогдох</a>
+    <div class="hero-section">
+        <header>
+            <div class="logo">
+                <span>⚖️</span> Amuulakhui-Legal Psychology
+            </div>
+            <nav class="nav-links">
+                <a href="#">Бидний тухай</a>
+                <a href="#">Сургалт</a>
+                <a href="#">Онлайн тест бөглөх</a>
+                <a href="#">Комик</a>
+            </nav>
+        </header>
+
+        <main class="main-content">
+            <h1>Сайн байна уу?</h1>
+            <p>Та өөрт тулгамдаж буй асуудлаа бичээрэй. Танд мэргэжлийн туслалцаа үзүүлэх болно.</p>
+            
+            <form class="contact-form">
+                <input type="text" placeholder="Асуудал бичих" required>
+                <input type="email" placeholder="Имэйл хаяг" required>
+                <button type="submit" class="btn-submit">Илгээх</button>
+            </form>
+        </main>
     </div>
 
 </body>
